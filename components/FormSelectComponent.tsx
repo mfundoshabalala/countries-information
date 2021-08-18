@@ -8,7 +8,7 @@ const FormSelectComponent: React.FC = () => {
 	};
 
 	return (
-		<select onChange={onSelectionChange} className="select-border-text">
+		<select onChange={onSelectionChange} className="w-full select-border-text xs:w-auto">
 			<option value="" disabled hidden selected>
 				Filter by region
 			</option>

@@ -4,13 +4,13 @@ const FormSearchComponent: React.FC = () => {
 	const { handleSearchTermChange } = useSearchContext();
 
 	return (
-		<div className="relative flex items-center">
+		<div className="relative flex items-center justify-center w-full xs:w-auto">
 			<input
 				type="search"
 				name="search"
 				id="search"
 				onChange={handleSearchTermChange}
-				className="input-border-text"
+				className="flex-1 input-border-text"
 				placeholder="Search for a country"
 			/>
 			<span className="absolute left-4">
