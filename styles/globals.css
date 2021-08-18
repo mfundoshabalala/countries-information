@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.custom-border-text {
+		@apply bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-700 rounded-md shadow-md hover:shadow-sm active:shadow-none;
+	}
+
+	.input-border-text {
+		@apply pl-12 pr-6 placeholder-gray-500 dark:placeholder-gray-200 custom-border-text;
+	}
+
+	.select-border-text {
+		@apply pl-8 pr-12 text-gray-500 dark:text-gray-200 custom-border-text;
+	}
+
+	.card-border-text {
+		@apply text-gray-700 dark:text-gray-50 custom-border-text;
+	}
+
+	.fancy-text {
+		@apply bg-gradient-to-r from-gray-700 via-gray-800 to-black drop-shadow-sm text-transparent bg-clip-text;
+	}
+}
