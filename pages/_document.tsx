@@ -23,8 +23,10 @@ class MyDocument extends Document {
 	render(): JSX.Element {
 		return (
 			<Html lang="en">
-				<Head />
-				<body>
+				<Head>
+					<meta charSet="utf-8" />
+				</Head>
+				<body className="text-gray-900 bg-white font-nunitoSans dark:bg-gray-800 dark:text-white">
 					<Main />
 					<NextScript />
 				</body>

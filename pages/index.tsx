@@ -1,11 +1,24 @@
+import Head from 'next/head';
 import { NextPage } from 'next';
-import Button from 'components/shared/Button';
+
+import FilterComponent from 'components/FilterComponent';
+import CountryListComponent from 'components/CountryListComponent';
+import { SelectProvider } from 'hooks/useSelectContext';
+import { SearchProvider } from 'hooks/useSearchContext';
+import BaseLayout from 'layout/BaseLayout';
 
 const HomePage: NextPage = () => (
-	<>
-		<h1 className="">Hello World</h1>
-		<Button>Click me please</Button>
-	</>
+	<BaseLayout>
+		<Head>
+			<title>Home Page</title>
+		</Head>
+		<SelectProvider>
+			<SearchProvider>
+				<FilterComponent />
+				<CountryListComponent />
+			</SearchProvider>
+		</SelectProvider>
+	</BaseLayout>
 );
 
 export default HomePage;
