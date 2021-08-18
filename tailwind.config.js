@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors');
+// const colors = require('tailwindcss/colors');
 
 module.exports = {
 	mode: 'jit',
@@ -6,17 +6,16 @@ module.exports = {
 		'./public/**/*.html',
 		'./{components,pages,lib,hooks}/**/*.{js,ts,jsx,tsx}',
 	],
-	darkMode: false, // or 'media' or 'class'
+	darkMode: 'class', // or 'media' or 'class'
 	theme: {
 		extend: {
-			colors: {
-				cyan: colors.cyan,
-				orange: colors.orange,
+			fontFamily: {
+				nunitoSans: "'Nunito Sans', sans-serif",
 			},
 		},
 	},
 	variants: {
 		extend: {},
 	},
-	plugins: [require('@tailwindcss/forms')],
+	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')],
 };
